@@ -1,0 +1,40 @@
+<view style="text-align: center" wx:if="{{pageLoading}}">
+	<t-loading theme="circular" size="40rpx" loading t-class-indicator="t-class-indicator">
+		<span slot="text" class="loading-text">加载中...</span>
+	</t-loading>
+</view>
+<view class="home-page-header">
+	<view class="swiper-wrap">
+		<t-swiper wx:if="{{imgSrcs.length > 0}}" current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}"
+			interval="{{interval}}" navigation="{{navigation}}">
+			<t-swiper-item wx:for="{{imgSrcs}}" wx:key="index">
+				<t-image src="{{item.img}}" t-class="t-image__swiper" bind:tap="navToActivityDetail" />
+			</t-swiper-item>
+		</t-swiper>
+	</view>
+</view>
+<view class="home-page-container">
+	<view class="demo">
+		<view class="demo-title">miniprogram-starter</view>
+		<view class="demo-desc">微信小程序快速开发模版（原生开发），采用JavaScript + WXSS + ESLint 进行构建，基于云开发和TDesign组件库，帮助用户快速搭建一个小程序项目。</view>
+		<t-demo title="01 支持微信云开发" desc="用户信息数据保存在云开发环境，操作简单便捷">
+
+		</t-demo>
+
+		<t-demo title="02 支持用户静默登录" desc="打开小程序即自动生成用户信息，静默保存在云端">
+
+		</t-demo>
+
+		<t-demo title="03 支持昵称头像引用" desc="遵循微信最新规则使用用户微信头像和昵称">
+		</t-demo>
+
+		<t-demo title="04 支持用户中心编辑" desc="用户可修改昵称、头像等信息并同步云端">
+		</t-demo>
+
+		<t-demo title="05 支持自定义字体" desc="小程序默认使用了霞鶩文楷字体">
+		</t-demo>
+
+		
+	</view>
+	<t-toast id="t-toast" />
+</view>

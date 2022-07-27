@@ -1,0 +1,40 @@
+<t-cell-group class="person-info">
+	<t-cell
+	  title="昵称"
+	  arrow
+	  note="{{user.name || '微信用户'}}"
+	  data-type="name"
+	  bind:click="onClickCell"
+	  t-class="t-cell-class"
+	  t-class-left="order-group__left"
+	/>
+	<t-cell
+	  title="性别"
+	  arrow
+	  note="{{genderMap[user.gender]}}"
+	  data-type="gender"
+	  bind:click="onClickCell"
+	  t-class="t-cell-class"
+	  t-class-left="order-group__left"
+	/>
+	<t-cell
+	  title="手机号"
+	  arrow
+	  note="{{user.phone ? user.phone : '去绑定手机号'}}"
+	  data-type="phoneNumber"
+	  bind:click="onClickCell"
+	  t-class="t-cell-class"
+	  t-class-left="order-group__left"
+	/>
+</t-cell-group>
+
+<t-select-picker
+  show="{{typeVisible}}"
+  picker-options="{{pickerOptions}}"
+  title="选择性别"
+  value="{{user.gender}}"
+  bind:confirm="onConfirm"
+  bind:close="onClose"
+/>
+<t-toast id="t-toast" />
+

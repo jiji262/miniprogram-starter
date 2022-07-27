@@ -1,0 +1,9 @@
+<view class="user-center-card">
+	<view class="user-center-card__header">
+		<button class="user-center-card__header__avatar" variant="text" open-type="chooseAvatar" bind:chooseavatar="gotoChooseAvatar">
+		<image style="width:48px; height:48px;" mode="aspectFill" src="{{user.avatar || defaultAvatarUrl}}" />
+		</button>
+		<view class="user-center-card__header__name" bind:tap="gotoUserEditPage">{{user.name || '微信用户'}}</view>
+	</view>
+</view>
+

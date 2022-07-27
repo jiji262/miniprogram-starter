@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'LXGWWenKai-Regular';
+  src: url('https://7072-production-3gfeipdk0cd94748-1304556364.tcb.qcloud.la/font/LXGWWenKai-Regular.ttf?sign=316e77dd39b1a882db471b9f29ef4944&t=1658814224');
+}
+
+page {
+  font-family: LXGWWenKai-Regular;
+}
+
+@import 'style/iconfont.wxss';
+
+
+.demo {
+  padding-bottom: 56rpx;
+}
+.demo-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  line-height: 56rpx;
+  margin: 48rpx 32rpx 0;
+  color: rgba(0, 0, 0, 0.9);
+}
+.demo-desc {
+  font-size: 24rpx;
+  color: #999;
+  margin: 8rpx 32rpx;
+  line-height: 36rpx;
+}
+.demo-section {
+  margin-top: 56rpx;
+}
+.demo-section__title {
+  font-size: 32rpx;
+  margin: 32rpx 32rpx 0;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 48rpx;
+}
+.demo-section__sub-title {
+  font-size: 28rpx;
+  margin: 32rpx 32rpx 24rpx 32rpx;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 44rpx;
+}
+.demo-section__desc {
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 8rpx 32rpx;
+  line-height: 40rpx;
+}
+.demo-section__container {
+  padding: 0 32rpx;
+}

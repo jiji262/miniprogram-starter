@@ -1,0 +1,13 @@
+<view class="demo-block {{!title && 'demo-block_notitle'}}">
+  <view wx:if="{{ title || desc }}" class="demo-block__heander">
+    <view wx:if="{{ title }}" class="demo-block__heander-title">{{ title }}</view>
+    <view wx:if="{{ desc }}" class="demo-block__heander-desc {{!title && 'demo-block_subtitle' }}"
+      >{{ desc }}</view
+    >
+    <!-- <slot name="title-right" /> -->
+  </view>
+
+  <view class="demo-block__slot {{padding ? 'with-padding' : ''}}">
+    <slot />
+  </view>
+</view>
